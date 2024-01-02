@@ -1,6 +1,7 @@
 const express=require('express');
 const mongoose=require('mongoose');
 require('dotenv').config();
+const cors=require('cors');
 
 const bodyParser=require('body-parser');
 const port=process.env.SERVER_PORT | 3000;
@@ -10,6 +11,8 @@ const productRoute=require('./Routes/ProductRoute');
 const customerRoute=require('./Routes/CustomerRoute');
 
 const app=express(); 
+
+app.use(cors());
 
 
 
